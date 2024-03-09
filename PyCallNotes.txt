@@ -1,0 +1,30 @@
+ERROR: The following 1 direct dependency failed to precompile:
+
+ExcelFiles [89b67f3b-d1aa-5f6f-9ca4-282e8d98620d]
+
+Failed to precompile ExcelFiles [89b67f3b-d1aa-5f6f-9ca4-282e8d98620d] to "C:\\Users\\wbecker\\.julia\\compiled\\v1.9\\ExcelFiles\\jl_4485.tmp".
+ERROR: LoadError: InitError: PyError (PyImport_ImportModule
+
+The Python package xlrd could not be imported by pyimport. Usually this means
+that you did not install xlrd in the Python version being used by PyCall.
+
+PyCall is currently configured to use the Python version at:
+
+C:\Users\wbecker\JuliaPlay\SAMPyCall\envs\python.exe
+
+and you should use whatever mechanism you usually use (apt-get, pip, conda,
+etcetera) to install the Python package containing the xlrd module.
+
+One alternative is to re-configure PyCall to use a different Python
+version on your system: set ENV["PYTHON"] to the path/name of the python
+executable you want to use, run Pkg.build("PyCall"), and re-launch Julia.
+
+Another alternative is to configure PyCall to use a Julia-specific Python
+distribution via the Conda.jl package (which installs a private Anaconda
+Python distribution), which has the advantage that packages can be installed
+and kept up-to-date via Julia.  As explained in the PyCall documentation,
+set ENV["PYTHON"]="", run Pkg.build("PyCall"), and re-launch Julia. Then,
+To install the xlrd module, you can use `pyimport_conda("xlrd", PKG)`,
+where PKG is the Anaconda package that contains the module xlrd,
+or alternatively you can use the Conda package directly (via
+`using Conda` followed by `Conda.add` etcetera).

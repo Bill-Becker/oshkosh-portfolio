@@ -1,0 +1,395 @@
+{
+    "DC": {
+        "can_net_meter": true,
+        "5700": {
+            "capacity_based_incentive_per_kw": 2500.0,
+            "capacity_based_incentive_basis_ac_or_dc": "DC",
+            "max_incentive_amount_dollar": 10000.0
+        },
+        "5686": {
+            "production_based_incentive_per_kwh": 0.5
+        }
+    },
+    "NH": {
+        "can_net_meter": true
+    },
+    "UT": {
+        "can_net_meter": false,
+        "5330": {
+            "size_limit_basis_ac_or_dc": "DC",
+            "percent_cost_based_incentive": 0.75,
+            "min_kw": 2000.0
+        },
+        "3529": {
+            "size_limit_basis_ac_or_dc": "DC",
+            "percent_cost_based_incentive": 0.75,
+            "min_kw": 2000.0
+        }
+    },
+    "WV": {
+        "can_net_meter": true
+    },
+    "MN": {
+        "5666": {
+            "max_kw": 1000.0,
+            "production_based_incentive_per_kwh": 0.11,
+            "size_limit_basis_ac_or_dc": "DC"
+        },
+        "can_net_meter": true
+    },
+    "NY": {
+        "21865": {
+            "min_kw": 200.0,
+            "max_kw": 1000.0,
+            "production_based_incentive_per_kwh": 0.1649,
+            "size_limit_basis_ac_or_dc": "DC"
+        },
+        "can_net_meter": true,
+        "80": {
+            "percent_cost_based_incentive": 0.25,
+            "max_incentive_amount_dollar": 5000.0
+        }
+    },
+    "GA": {
+        "can_net_meter": true
+    },
+    "LA": {
+        "can_net_meter": true
+    },
+    "TX": {
+        "can_net_meter": false,
+        "22089": {
+            "capacity_based_incentive_per_kw": 1000.0,
+            "capacity_based_incentive_basis_ac_or_dc": "DC"
+        },
+        "22090": {
+            "capacity_based_incentive_per_kw": 1000.0,
+            "capacity_based_incentive_basis_ac_or_dc": "DC"
+        },
+        "5858": {
+            "production_based_incentive_per_kwh": 0.0469
+        }
+    },
+    "MS": {
+        "can_net_meter": true,
+        "5675": {
+            "size_limit_basis_ac_or_dc": "DC",
+            "max_kw": 500.0,
+            "production_based_incentive_per_kwh": 0.0,
+            "min_kw": 0.5
+        }
+    },
+    "IA": {
+        "5758": {
+            "size_limit_basis_ac_or_dc": "DC",
+            "max_kw": 50.0,
+            "production_based_incentive_per_kwh": 0.13,
+            "min_kw": 0.5
+        },
+        "can_net_meter": true,
+        "1176": {
+            "production_based_incentive_per_kwh": 0.02
+        }
+    },
+    "IL": {
+        "can_net_meter": true,
+        "3238": {
+            "max_kw": 10.0,
+            "production_based_incentive_per_kwh": 0.075,
+            "size_limit_basis_ac_or_dc": "AC"
+        }
+    },
+    "NM": {
+        "can_net_meter": true,
+        "22472": {
+            "size_limit_basis_ac_or_dc": "DC",
+            "percent_cost_based_incentive": 0.1,
+            "max_incentive_amount_dollar": 6000.0,
+            "min_kw": 0.1
+        }
+    },
+    "OK": {
+        "can_net_meter": true,
+        "1335": {
+            "percent_cost_based_incentive": 0.03,
+            "max_incentive_amount_dollar": 200000.0
+        },
+        "1333": {
+            "percent_cost_based_incentive": 0.03,
+            "max_incentive_amount_dollar": 150000.0
+        }
+    },
+    "RI": {
+        "can_net_meter": true,
+        "5361": {
+            "capacity_based_incentive_per_kw": 650.0,
+            "capacity_based_incentive_basis_ac_or_dc": "DC",
+            "max_kw": 7.6,
+            "size_limit_basis_ac_or_dc": "DC"
+        }
+    },
+    "NJ": {
+        "can_net_meter": true,
+        "5687": {
+            "production_based_incentive_per_kwh": 0.315
+        }
+    },
+    "KS": {
+        "can_net_meter": true
+    },
+    "PR": {
+        "can_net_meter": false
+    },
+    "ID": {
+        "can_net_meter": false
+    },
+    "OH": {
+        "can_net_meter": true
+    },
+    "HI": {
+        "50": {
+            "percent_cost_based_incentive": 0.35
+        },
+        "49": {
+            "percent_cost_based_incentive": 0.35,
+            "max_incentive_amount_dollar": 500000.0
+        },
+        "can_net_meter": false
+    },
+    "MA": {
+        "can_net_meter": true,
+        "22495": {
+            "capacity_based_incentive_per_kw": 100.0,
+            "max_percent_of_cost": 25.0,
+            "capacity_based_incentive_basis_ac_or_dc": "DC",
+            "max_incentive_amount_dollar": 1000.0
+        },
+        "22488": {
+            "capacity_based_incentive_per_kw": 1200.0,
+            "max_percent_of_cost": 50.0,
+            "capacity_based_incentive_basis_ac_or_dc": "DC"
+        },
+        "22494": {
+            "capacity_based_incentive_per_kw": 1200.0,
+            "max_percent_of_cost": 50.0,
+            "capacity_based_incentive_basis_ac_or_dc": "DC"
+        },
+        "144": {
+            "percent_cost_based_incentive": 0.15,
+            "max_incentive_amount_dollar": 1000.0
+        },
+        "22497": {
+            "capacity_based_incentive_per_kw": 300.0,
+            "capacity_based_incentive_basis_ac_or_dc": "DC",
+            "max_incentive_amount_dollar": 3000.0
+        }
+    },
+    "VT": {
+        "3428": {
+            "percent_cost_based_incentive": 0.07200000000000001
+        },
+        "can_net_meter": true
+    },
+    "VI": {
+        "can_net_meter": false
+    },
+    "MT": {
+        "2770": {
+            "percent_cost_based_incentive": 0.35
+        },
+        "can_net_meter": true,
+        "2773": {
+            "percent_cost_based_incentive": 0.35
+        },
+        "496": {
+            "percent_cost_based_incentive": 0.5
+        },
+        "611": {
+            "percent_cost_based_incentive": 0.35
+        }
+    },
+    "MI": {
+        "can_net_meter": true
+    },
+    "MO": {
+        "can_net_meter": true
+    },
+    "FL": {
+        "5818": {
+            "capacity_based_incentive_per_kw": 2000.0,
+            "capacity_based_incentive_basis_ac_or_dc": "DC",
+            "max_incentive_amount_dollar": 5000.0
+        },
+        "can_net_meter": true
+    },
+    "NV": {
+        "can_net_meter": true,
+        "180": {
+            "size_limit_basis_ac_or_dc": "DC",
+            "percent_cost_based_incentive": 0.55,
+            "min_kw": 10000.0
+        }
+    },
+    "CA": {
+        "can_net_meter": false
+    },
+    "SC": {
+        "1804": {
+            "percent_cost_based_incentive": 0.25,
+            "max_incentive_amount_dollar": 3500.0
+        },
+        "5778": {
+            "capacity_based_incentive_per_kw": 1000.0,
+            "capacity_based_incentive_basis_ac_or_dc": "DC"
+        },
+        "1803": {
+            "percent_cost_based_incentive": 0.25
+        },
+        "can_net_meter": true,
+        "21862": {
+            "capacity_based_incentive_per_kw": 950.0,
+            "capacity_based_incentive_basis_ac_or_dc": "DC",
+            "max_incentive_amount_dollar": 5700.0
+        }
+    },
+    "ME": {
+        "can_net_meter": false
+    },
+    "KY": {
+        "can_net_meter": true
+    },
+    "WY": {
+        "can_net_meter": true
+    },
+    "NC": {
+        "can_net_meter": true
+    },
+    "AR": {
+        "can_net_meter": true
+    },
+    "AZ": {
+        "can_net_meter": false,
+        "118": {
+            "percent_cost_based_incentive": 0.25,
+            "max_incentive_amount_dollar": 1000.0
+        }
+    },
+    "IN": {
+        "can_net_meter": true,
+        "5672": {
+            "max_kw": 200.0,
+            "production_based_incentive_per_kwh": 0.14,
+            "size_limit_basis_ac_or_dc": "DC"
+        }
+    },
+    "ND": {
+        "can_net_meter": true
+    },
+    "SD": {
+        "can_net_meter": false
+    },
+    "DE": {
+        "5691": {
+            "size_limit_basis_ac_or_dc": "DC",
+            "max_kw": 2000.0,
+            "production_based_incentive_per_kwh": 0.05,
+            "min_kw": 200.0
+        },
+        "can_net_meter": true,
+        "5690": {
+            "production_based_incentive_per_kwh": 0.05
+        }
+    },
+    "GU": {
+        "can_net_meter": false
+    },
+    "NE": {
+        "can_net_meter": true,
+        "1837": {
+            "production_based_incentive_per_kwh": 0.0
+        },
+        "2575": {
+            "production_based_incentive_per_kwh": 0.0
+        }
+    },
+    "MD": {
+        "5688": {
+            "production_based_incentive_per_kwh": 0.14
+        },
+        "can_net_meter": true,
+        "3753": {
+            "size_limit_basis_ac_or_dc": "DC",
+            "capacity_based_incentive_per_kw": 30.0,
+            "capacity_based_incentive_basis_ac_or_dc": "DC",
+            "max_kw": 375.0,
+            "min_kw": 100.0
+        },
+        "5630": {
+            "capacity_based_incentive_per_kw": 600.0,
+            "capacity_based_incentive_basis_ac_or_dc": "DC"
+        }
+    },
+    "MP": {
+        "can_net_meter": false
+    },
+    "AL": {
+        "5674": {
+            "size_limit_basis_ac_or_dc": "DC",
+            "max_kw": 50.0,
+            "production_based_incentive_per_kwh": 0.02,
+            "min_kw": 0.5
+        },
+        "5721": {
+            "size_limit_basis_ac_or_dc": "DC",
+            "max_kw": 1000.0,
+            "production_based_incentive_per_kwh": 0.04,
+            "min_kw": 50.0
+        },
+        "can_net_meter": false
+    },
+    "AK": {
+        "can_net_meter": true
+    },
+    "CO": {
+        "can_net_meter": true
+    },
+    "WI": {
+        "can_net_meter": true
+    },
+    "TN": {
+        "can_net_meter": false,
+        "4385": {
+            "size_limit_basis_ac_or_dc": "DC",
+            "max_kw": 20000.0,
+            "production_based_incentive_per_kwh": 0.04,
+            "min_kw": 50.0
+        }
+    },
+    "WA": {
+        "can_net_meter": true,
+        "5761": {
+            "capacity_based_incentive_per_kw": 750.0,
+            "capacity_based_incentive_basis_ac_or_dc": "AC",
+            "max_incentive_amount_dollar": 10000.0
+        }
+    },
+    "CT": {
+        "can_net_meter": false
+    },
+    "VA": {
+        "can_net_meter": true
+    },
+    "PA": {
+        "22110": {
+            "capacity_based_incentive_per_kw": 100.0,
+            "capacity_based_incentive_basis_ac_or_dc": "DC"
+        },
+        "5682": {
+            "production_based_incentive_per_kwh": 0.04
+        },
+        "can_net_meter": true
+    },
+    "OR": {
+        "can_net_meter": true
+    }
+}
