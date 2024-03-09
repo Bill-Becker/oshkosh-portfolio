@@ -10,7 +10,11 @@ using PyCall
 using XLSX
 using DotEnv
 DotEnv.load!()
-# Add a file called .env and add NREL_DEVELOPER_API_KEY="your_api_key_here" on the first line
+
+# TODO
+# Setup to evaluate each tech separately for each site, and size to some heuristic
+# If net metering, FIX PV and Wind (separately) to the minimum of NEM limit or 2x average load
+# Do FlatLoad_16_7 for shifts = 2, else FlatLoad
 
 # Convert city to latitude and longitude
 geopy=pyimport("geopy")
@@ -38,7 +42,8 @@ input_data = JSON.parsefile("inputs.json")
 # # Run REopt for each site after assigning input_data fields specific to the site
 # # If not evaluating all sites, for debugging, adjust sites_iter
 site_analysis = []
-sites_iter = eachindex(df[!, "City"][1:5])
+results_file_name = "portfolio_3.csv"
+sites_iter = eachindex(df[!, "City"][3:3])
 for i in sites_iter
     input_data_site = copy(input_data)
     
@@ -76,7 +81,7 @@ for i in sites_iter
 
     # Check and update for NEM
     net_metering = net_metering_all[state] == 1 ? true : false
-    if net_metering
+    if false #net_metering
         input_data["ElectricUtility"]["net_metering_limit_kw"] = net_metering_limit_kw
         input_data_site["PV"]["max_kw"] = input_data["ElectricUtility"]["net_metering_limit_kw"]
         input_data_site["Wind"]["max_kw"] = input_data["ElectricUtility"]["net_metering_limit_kw"] 
@@ -87,9 +92,9 @@ for i in sites_iter
     # Calc CHP heuristic that REopt would also calc, but assume 80% boiler effic, 34% elec effic, 44% thermal effic based on recip SC 3
     chp_heuristic_kw = avg_ng_load_mmbtu_per_hour * 0.8 * 1E6 / 3412 * 1 / 0.34 * 0.44
     input_data_site["CHP"]["max_kw"] = min(avg_elec_load_kw, chp_heuristic_kw)  # Rely on max being 2x avg heating load size
-    if input_data_site["CHP"]["max_kw"] < 500.0
-        input_data_site["CHP"]["max_kw"] = 0
-    end
+    # if input_data_site["CHP"]["max_kw"] < 500.0
+    #     input_data_site["CHP"]["max_kw"] = 0
+    # end
 
     s = Scenario(input_data_site)
     inputs = REoptInputs(s)
@@ -138,7 +143,7 @@ df = DataFrame(site = [i for i in sites_iter],
                                                     site_analysis[i][2]["Site"]["annual_emissions_tonnes_CO2_bau"], digits=0) for i in sites_iter]
                )
 
-CSV.write("./portfolio.csv", df)
+CSV.write("./"*results_file_name, df)
 
 # results = run_reopt(m1, inputs)
 
