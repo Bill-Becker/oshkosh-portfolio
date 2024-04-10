@@ -1,19 +1,9 @@
 {
     "Site": {},
-    "ElectricLoad": {
-        "doe_reference_name": "FlatLoad"
-    },
-    "SpaceHeatingLoad": {
-        "doe_reference_name": "FlatLoad"
-    },
-    "ExistingBoiler": {
-        "production_type": "hot_water"
-    },    
-    "ElectricTariff": {},
     "ElectricUtility": {},
-    "PV": {
-        "array_type": 0
-    },
-    "Wind":{},
-    "CHP": {}
+    "ElectricTariff": {},
+    "ElectricLoad": {},
+    "SpaceHeatingLoad": {},
+    "ExistingBoiler": {},
+    "CoolingLoad": {}
 }

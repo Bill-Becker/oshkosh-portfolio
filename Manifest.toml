@@ -412,7 +412,7 @@ version = "1.0.2"
 [[deps.GhpGhx]]
 git-tree-sha1 = "208d7ce8f7991c176c37e369a21721c73b991520"
 repo-rev = "main"
-repo-url = "https://github.com/NREL/GhpGhx.jl#ghp_centralized"
+repo-url = "https://github.com/NREL/GhpGhx.jl"
 uuid = "7ce85f02-24a8-4d69-a3f0-14b5daa7d30c"
 version = "0.1.0"
 
@@ -1017,9 +1017,9 @@ uuid = "3fa0cd96-eef1-5676-8a61-b3b8758bbffb"
 
 [[deps.REopt]]
 deps = ["ArchGDAL", "CSV", "CoolProp", "DataFrames", "Dates", "DelimitedFiles", "HTTP", "JLD", "JSON", "JuMP", "LinDistFlow", "LinearAlgebra", "Logging", "MathOptInterface", "Requires", "Roots", "Statistics", "TestEnv"]
-git-tree-sha1 = "143c40671c75f23e9a786df8f97948b6cfb18823"
+git-tree-sha1 = "d7bdc0d314e0821a8904ba204265345aab1ee8bc"
 uuid = "d36ad4e8-d74a-4f7a-ace1-eaea049febf6"
-version = "0.39.1"
+version = "0.43.0"
 
 [[deps.REoptPlots]]
 deps = ["CSV", "DataFrames", "Dates", "JSON3", "PlotlyJS", "Statistics"]
