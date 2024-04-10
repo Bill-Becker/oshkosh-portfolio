@@ -1,0 +1,5 @@
+Site_Tech,RE_Produced_kWh,Simple_Payback,CO2_Reduced_Tonne,NPV,NPVI,CO2_Breakeven_Cost_Per_Tonne,CapEx,Size
+Pierce -Assembly_GHP,0.0,0.0,3170.0,-1.35e7,-0.64,225.0,2.12e7,3320.0
+Pierce -Assembly_Wind,4120.0,6.63,1050.0,1.88e6,1.24,0.0,1.52e6,1090.0
+Pierce -Assembly_CHP,0.0,7.59,-346.0,2.24e6,0.69,0.0,3.23e6,1980.0
+Pierce -Assembly_PV,3570.0,17.0,364.0,28000.0,0.01,39.0,3.3e6,2880.0
