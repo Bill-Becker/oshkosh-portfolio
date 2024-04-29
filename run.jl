@@ -13,6 +13,9 @@ using DotEnv
 DotEnv.load!()
 
 # TODO check that when geocode fails, we're still updating lat/long somehow
+# Hybrid GHP with Automatic and Fractional both don't seem to be changing GHX size
+# Asked about year one emissions with Cambium to Amanda, but pretty sure we don't get "year one" from Cambium
+# Maybe need to use one-year analysis or AVERT to get year one - conscensus with whole team
 
 function set_tech_size!(tech, size, input_data)
     if !(tech == "GHP")
@@ -28,13 +31,13 @@ end
 
 # Convert city to latitude and longitude
 geopy=pyimport("geopy")
-geolocator=geopy.geocoders.Nominatim(user_agent="MyApp2")
+geolocator=geopy.geocoders.Nominatim(user_agent="MyApp3")
 
 # Import Excel file into DataFrame
 df = DataFrame(XLSX.readtable("data.xlsx", "OshKosh Data"))
 
 # Technologies to evaluate
-tech_list = ["PV", "Wind", "CHP", "GHP"]
+tech_list = ["GHP"] #, "Wind", "CHP"] #, "GHP"]
 
 # Start with a single analysis before setting up loop, and set all constant inputs
 input_data = JSON.parsefile("inputs.json")
@@ -72,6 +75,7 @@ t = @elapsed begin
                 city = "Pittsburgh"
             end
             try
+                # TODO get lat/long separately and store in a dict to avoid geolocator calls
                 location = geolocator.geocode(city)
                 input_data_site["Site"]["latitude"] = location.latitude
                 input_data_site["Site"]["longitude"] = location.longitude
@@ -102,6 +106,13 @@ t = @elapsed begin
             if tech == "GHP"
                 input_data_site[tech]["building_sqft"] = df[i, "Facility square footage"]
                 input_data_site[tech]["om_cost_per_sqft_year"] = 0.0  # Default is -$0.51/sqft
+                aux_heater_type = "electric"
+                input_data_site[tech]["is_ghx_hybrid"] = true
+                input_data_site[tech]["aux_heater_installed_cost_per_mmbtu_per_hr"] = 0.0
+                input_data_site[tech]["aux_cooler_installed_cost_per_ton"] = 0.00
+                input_data_site[tech]["ghpghx_inputs"] = [Dict()]
+                input_data_site[tech]["ghpghx_inputs"][1]["hybrid_ghx_sizing_method"] = "Fractional" # "Automatic"
+                input_data_site[tech]["ghpghx_inputs"][1]["hybrid_ghx_sizing_fraction"] = 0.6
             end
 
             # Electric load cost
@@ -166,12 +177,13 @@ t = @elapsed begin
                 results = run_reopt([m1,m2], inputs)
             catch
                 println("Something went wrong running REopt")
-                append!(failed_runs, filename)
+                append!(failed_runs, [filename])
             end
 
             analysis_data = Dict("inputs" => input_data_site,
                                 "outputs" => results)
 
+            filename *= "hybrid"
             open("results/$filename.json","w") do f
                 JSON.print(f, analysis_data)
             end
