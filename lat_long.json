@@ -1,0 +1,82 @@
+{
+    "Kewaunee": {
+        "latitude": 44.521282,
+        "longitude": -87.6301086
+    },
+    "Jefferson City": {
+        "latitude": 38.577359,
+        "longitude": -92.1724265
+    },
+    "Menasha": {
+        "latitude": 44.2022293,
+        "longitude": -88.4465361
+    },
+    "Warrenton": {
+        "latitude": 38.7135498,
+        "longitude": -77.795367
+    },
+    "Murfreesboro": {
+        "latitude": 35.8460396,
+        "longitude": -86.3921096
+    },
+    "Ogden": {
+        "latitude": 41.2230048,
+        "longitude": -111.9738429
+    },
+    "Appleton": {
+        "latitude": 44.2613967,
+        "longitude": -88.4069744
+    },
+    "Greencastle": {
+        "latitude": 39.6444898,
+        "longitude": -86.8647316
+    },
+    "Riceville": {
+        "latitude": 43.3638674,
+        "longitude": -92.5543094
+    },
+    "Dodge Center": {
+        "latitude": 44.0280202,
+        "longitude": -92.8547287
+    },
+    "Shippensburg": {
+        "latitude": 40.0507198,
+        "longitude": -77.5205485
+    },
+    "Garner": {
+        "latitude": 43.102147,
+        "longitude": -93.6020069
+    },
+    "Oshkosh": {
+        "latitude": 44.0206919,
+        "longitude": -88.5408574
+    },
+    "Orlando": {
+        "latitude": 28.5421109,
+        "longitude": -81.3790304
+    },
+    "McConnellsburg": {
+        "latitude": 39.932589,
+        "longitude": -77.9988906
+    },
+    "Spartanburg": {
+        "latitude": 34.9498007,
+        "longitude": -81.9320157
+    },
+    "Bedford": {
+        "latitude": 40.0271453,
+        "longitude": -78.5237447
+    },
+    "Bradenton": {
+        "latitude": 27.4989278,
+        "longitude": -82.5748194
+    },
+    "Clearwater": {
+        "latitude": 27.9658533,
+        "longitude": -82.8001026
+    },
+    "Neenah": {
+        "latitude": 44.1858193,
+        "longitude": -88.462609
+    }
+}
