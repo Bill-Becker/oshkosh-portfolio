@@ -6,16 +6,13 @@ using JSON
 # using REoptPlots
 using DataFrames
 using CSV
-using PyCall
 using XLSX
 using GhpGhx
 using DotEnv
 DotEnv.load!()
 
-# TODO check that when geocode fails, we're still updating lat/long somehow
-# Hybrid GHP with Automatic and Fractional both don't seem to be changing GHX size
-# Asked about year one emissions with Cambium to Amanda, but pretty sure we don't get "year one" from Cambium
-# Maybe need to use one-year analysis or AVERT to get year one - conscensus with whole team
+# Check Hybrid GHP with Automatic, different?
+# Report year 1 emissions using Cambium SRMER 1-Year (2024) data
 
 function set_tech_size!(tech, size, input_data)
     if !(tech == "GHP")
@@ -29,15 +26,12 @@ function set_tech_size!(tech, size, input_data)
     end
 end
 
-# Convert city to latitude and longitude
-geopy=pyimport("geopy")
-geolocator=geopy.geocoders.Nominatim(user_agent="MyApp3")
-
 # Import Excel file into DataFrame
 df = DataFrame(XLSX.readtable("data.xlsx", "OshKosh Data"))
+lat_long = JSON.parsefile("lat_long.json")
 
 # Technologies to evaluate
-tech_list = ["GHP"] #, "Wind", "CHP"] #, "GHP"]
+tech_list = ["PV", "Wind", "CHP"] # "GHP"]
 
 # Start with a single analysis before setting up loop, and set all constant inputs
 input_data = JSON.parsefile("inputs.json")
@@ -49,7 +43,7 @@ electricity_cost_factor = 0.8
 # this also accounts for NEM which cannot reduce demand charges with exported energy which are baked into the blended rate
 export_credit_fraction = 0.5
 
-# Failed runs
+# Failed runs (unused right now)
 failed_runs = []
 
 # For each site, run fixed-size individual techs and write inputs and results to .json file
@@ -64,25 +58,10 @@ t = @elapsed begin
             filename = site_name * "_" * tech
             input_data_site = copy(input_data)
 
-            # Site location
+            # Site location for lat/long
             city = df[i, "City"]
-            # Some cities giving geolocation.geocode(city) trouble; change to nearest working
-            if city == "Orlando"
-                city = "Clearwater"
-            elseif city == "Garner"
-                city = "Mason City"
-            elseif city == "Bedford"
-                city = "Pittsburgh"
-            end
-            try
-                # TODO get lat/long separately and store in a dict to avoid geolocator calls
-                location = geolocator.geocode(city)
-                input_data_site["Site"]["latitude"] = location.latitude
-                input_data_site["Site"]["longitude"] = location.longitude
-            catch
-                @error("Geolocator errored with city: $city")
-                continue # skip to next site
-            end
+            input_data_site["Site"]["latitude"] = lat_long[city]["latitude"]
+            input_data_site["Site"]["longitude"] = lat_long[city]["longitude"]
 
             # Add tech input and set/fix tech size
             input_data_site[tech] = Dict()
@@ -104,24 +83,24 @@ t = @elapsed begin
 
             # Required building_sqft input for GHP, but ignore O&M benefit
             if tech == "GHP"
+                # Cooling Load, for GHP analysis
+                input_data_site["CoolingLoad"] = Dict()
+                # input_data_site["CoolingLoad"]["annual_fraction_of_electric_load"] = df[i, "Cooling Load Fraction"]
+                input_data_site["CoolingLoad"]["annual_tonhour"] = df[i, "Cooling Load Annual Ton-Hr"]
                 input_data_site[tech]["building_sqft"] = df[i, "Facility square footage"]
                 input_data_site[tech]["om_cost_per_sqft_year"] = 0.0  # Default is -$0.51/sqft
                 aux_heater_type = "electric"
                 input_data_site[tech]["is_ghx_hybrid"] = true
                 input_data_site[tech]["aux_heater_installed_cost_per_mmbtu_per_hr"] = 0.0
-                input_data_site[tech]["aux_cooler_installed_cost_per_ton"] = 0.00
+                input_data_site[tech]["aux_cooler_installed_cost_per_ton"] = 0.0
                 input_data_site[tech]["ghpghx_inputs"] = [Dict()]
-                input_data_site[tech]["ghpghx_inputs"][1]["hybrid_ghx_sizing_method"] = "Fractional" # "Automatic"
-                input_data_site[tech]["ghpghx_inputs"][1]["hybrid_ghx_sizing_fraction"] = 0.6
+                input_data_site[tech]["ghpghx_inputs"][1]["hybrid_ghx_sizing_method"] = "Automatic" #"Fractional"
+                # input_data_site[tech]["ghpghx_inputs"][1]["hybrid_ghx_sizing_fraction"] = 0.6
             end
 
             # Electric load cost
             input_data_site["ElectricLoad"]["annual_kwh"] = df[i, "Annual Electricity, KWH"]
             input_data_site["ElectricTariff"]["blended_annual_energy_rate"] = df[i, "\$/kWh"] * electricity_cost_factor
-
-            # Cooling Load, for GHP analysis
-            # input_data_site["CoolingLoad"]["annual_fraction_of_electric_load"] = df[i, "Cooling Load Fraction"]
-            input_data_site["CoolingLoad"]["annual_tonhour"] = df[i, "Cooling Load Annual Ton-Hr"]
 
             # NG load and cost
             input_data_site["SpaceHeatingLoad"]["annual_mmbtu"] = df[i, "Addressable Fuel Load MMBtu"]
@@ -137,9 +116,10 @@ t = @elapsed begin
             input_data_site["ElectricLoad"]["blended_doe_reference_percents"] = [0.5, 0.5]
             input_data_site["SpaceHeatingLoad"]["blended_doe_reference_names"] = ["Warehouse", baseload]
             input_data_site["SpaceHeatingLoad"]["blended_doe_reference_percents"] = [0.5, 0.5]
-            input_data_site["CoolingLoad"]["blended_doe_reference_names"] = ["Warehouse", baseload]
-            input_data_site["CoolingLoad"]["blended_doe_reference_percents"] = [0.5, 0.5]
-
+            if tech == "GHP"
+                input_data_site["CoolingLoad"]["blended_doe_reference_names"] = ["Warehouse", baseload]
+                input_data_site["CoolingLoad"]["blended_doe_reference_percents"] = [0.5, 0.5]
+            end
             # Check and update for NEM, but avoiding modeling NEM (slow) because setting PV/Wind max_kw to NEM limit
             # Note, the electricity_cost_factor is already applied to the blended_annual_energy_rate to account for lack of reducing demand charges
             if df[i, "Net Metering Limit"] > 0.0
@@ -156,23 +136,23 @@ t = @elapsed begin
                 inputs = REoptInputs(s)
 
                 # Xpress solver
-                m1 = Model(optimizer_with_attributes(Xpress.Optimizer, "MIPRELSTOP" => 0.01, "OUTPUTLOG" => 0))
-                m2 = Model(optimizer_with_attributes(Xpress.Optimizer, "MIPRELSTOP" => 0.01, "OUTPUTLOG" => 0))
+                # m1 = Model(optimizer_with_attributes(Xpress.Optimizer, "MIPRELSTOP" => 0.01, "OUTPUTLOG" => 0))
+                # m2 = Model(optimizer_with_attributes(Xpress.Optimizer, "MIPRELSTOP" => 0.01, "OUTPUTLOG" => 0))
 
                 # HiGHS solver
-                # m1 = Model(optimizer_with_attributes(HiGHS.Optimizer, 
-                #         "time_limit" => 450.0,
-                #         "mip_rel_gap" => 0.01,
-                #         "output_flag" => false, 
-                #         "log_to_console" => false)
-                #         )
+                m1 = Model(optimizer_with_attributes(HiGHS.Optimizer, 
+                        "time_limit" => 450.0,
+                        "mip_rel_gap" => 0.01,
+                        "output_flag" => false, 
+                        "log_to_console" => false)
+                        )
 
-                # m2 = Model(optimizer_with_attributes(HiGHS.Optimizer, 
-                #         "time_limit" => 450.0,
-                #         "mip_rel_gap" => 0.01,
-                #         "output_flag" => false, 
-                #         "log_to_console" => false)
-                #         )            
+                m2 = Model(optimizer_with_attributes(HiGHS.Optimizer, 
+                        "time_limit" => 450.0,
+                        "mip_rel_gap" => 0.01,
+                        "output_flag" => false, 
+                        "log_to_console" => false)
+                        )            
 
                 results = run_reopt([m1,m2], inputs)
             catch
@@ -183,7 +163,6 @@ t = @elapsed begin
             analysis_data = Dict("inputs" => input_data_site,
                                 "outputs" => results)
 
-            filename *= "hybrid"
             open("results/$filename.json","w") do f
                 JSON.print(f, analysis_data)
             end

@@ -4,20 +4,7 @@ using CSV
 using XLSX
 
 
-results = JSON.parsefile("results_summary_Pierce -Assembly.json")
-
-# This method of dataframe creation provides control of order of metrics, but at the cost of needing to 
-#   sync with metrics in the results summary data file
-# df = DataFrame(Site_Tech = site_tech,
-#     Size = zeros(length(site_tech)),
-#     NPV = zeros(length(site_tech)),
-#     CapEx = zeros(length(site_tech)),
-#     NPVI = zeros(length(site_tech)),
-#     Simple_Payback = zeros(length(site_tech)),
-#     RE_Produced_kWh = zeros(length(site_tech)),
-#     CO2_Reduced_Tonne = zeros(length(site_tech)),
-#     CO2_Breakeven_Cost_Per_Tonne = zeros(length(site_tech))
-#     )
+results = JSON.parsefile("results_summary.json")
 
 # Find a single site and tech to index the results dict for keys
 global site1 = ""
@@ -50,4 +37,4 @@ for (s, site) in enumerate(keys(results))
     end
 end
 
-CSV.write("results_summary_Pierce.csv", df)
+CSV.write("results_summary.csv", df)

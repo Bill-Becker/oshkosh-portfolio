@@ -1,0 +1,82 @@
+Site_Tech,Elec_Produced_MWh,Simple_Payback,NPV,NPVI,CapEx,Size,CO2_Reduced_Year_One_Tonne
+Aerotech - Ground Support Equipment_Wind,1450.0,22.4,37000.0,0.03,1.44e6,790.0,2030.0
+Aerotech - Ground Support Equipment_CHP,0.0,75.8,300000.0,2180.0,137.0,0.0,3040.0
+Aerotech - Ground Support Equipment_PV,2110.0,13.4,643000.0,0.43,1.5e6,1440.0,1630.0
+IMT (Iowa Mold Tooling)_Wind,1940.0,8.5,1.09e6,1.42,768000.0,486.0,2700.0
+IMT (Iowa Mold Tooling)_CHP,2540.0,15.3,15000.0,0.01,1.15e6,705.0,2680.0
+IMT (Iowa Mold Tooling)_PV,1300.0,13.8,354000.0,0.37,953000.0,1000.0,3110.0
+Jefferson City_Wind,5490.0,17.2,266000.0,0.1,2.6e6,1740.0,5540.0
+Jefferson City_CHP,0.0,0.0,211000.0,1.77,120000.0,41.0,10200.0
+Jefferson City_PV,3710.0,29.4,-990000.0,-0.29,3.36e6,2920.0,7010.0
+Aerotech - Jetway Systems_Wind,1170.0,41.7,-134000.0,-0.12,1.07e6,625.0,4030.0
+Aerotech - Jetway Systems_CHP,3120.0,12.0,299000.0,0.18,1.64e6,991.0,3500.0
+Aerotech - Jetway Systems_PV,2010.0,19.9,144000.0,0.1,1.48e6,1420.0,3640.0
+McNeilus - Dodge Center_Wind,17400.0,9.66,8.02e6,1.34,5.99e6,3770.0,2150.0
+McNeilus - Dodge Center_CHP,9520.0,7.97,2.61e6,0.63,4.13e6,2690.0,9860.0
+McNeilus - Dodge Center_PV,5440.0,14.4,832000.0,0.16,5.04e6,4260.0,11000.0
+Menasha Data Center_Wind,455.0,13.5,327000.0,1.06,310000.0,141.0,1680.0
+Menasha Data Center_CHP,0.0,0.0,300000.0,4310.0,69.7,0.0,2060.0
+Menasha Data Center_PV,87.0,20.1,282000.0,3.21,87800.0,70.0,1990.0
+Murfreesboro_Wind,294.0,20.8,65000.0,0.21,308000.0,182.0,305.0
+Murfreesboro_CHP,163.0,13.0,307000.0,2.83,109000.0,37.0,448.0
+Murfreesboro_PV,487.0,8.44,313000.0,1.84,170000.0,375.0,136.0
+Defense - West Plant_Wind,2310.0,17.3,463000.0,0.38,1.23e6,696.0,1380.0
+Defense - West Plant_CHP,1740.0,13.7,108000.0,0.1,1.09e6,668.0,2260.0
+Defense - West Plant_PV,493.0,7.16,263000.0,1.32,200000.0,399.0,2910.0
+Defense - Harrison_Wind,3180.0,16.4,491000.0,0.27,1.81e6,959.0,2060.0
+Defense - Harrison_CHP,2830.0,9.55,453000.0,0.44,1.04e6,638.0,3020.0
+Defense - Harrison_PV,2240.0,21.5,-128000.0,-0.06,1.97e6,1810.0,2820.0
+JLG - Shippensburg_Wind,2380.0,36.2,-81000.0,-0.04,2.01e6,1050.0,1040.0
+JLG - Shippensburg_CHP,0.0,0.0,-26000.0,-0.19,138000.0,178.0,2820.0
+JLG - Shippensburg_PV,2340.0,38.4,-145000.0,-0.07,2.11e6,1920.0,1030.0
+Defense - North Plant_Wind,960.0,5.47,538000.0,1.6,336000.0,289.0,4310.0
+Defense - North Plant_CHP,2350.0,7.91,428000.0,0.71,602000.0,400.0,3770.0
+Defense - North Plant_PV,1850.0,16.2,116000.0,0.07,1.57e6,1490.0,3520.0
+Defense - South Plant-ECoat_Wind,9280.0,13.3,1.73e6,0.48,3.6e6,2340.0,8080.0
+Defense - South Plant-ECoat_CHP,9030.0,14.2,95000.0,0.02,4.44e6,2880.0,10300.0
+Defense - South Plant-ECoat_PV,3600.0,23.6,-660000.0,-0.2,3.35e6,2920.0,12800.0
+JLG - Hykes Road_Wind,1460.0,10.4,500000.0,0.78,642000.0,429.0,2090.0
+JLG - Hykes Road_CHP,0.0,0.0,-390000.0,-0.62,627000.0,412.0,3280.0
+JLG - Hykes Road_PV,853.0,15.0,175000.0,0.33,527000.0,660.0,2560.0
+Pierce -Assembly_Wind,4120.0,6.63,1.88e6,1.24,1.52e6,1090.0,10800.0
+Pierce -Assembly_CHP,8500.0,7.59,2.24e6,0.69,3.23e6,1980.0,9000.0
+Pierce -Assembly_PV,3570.0,17.0,28000.0,0.01,3.3e6,2880.0,11200.0
+Fronline Communications_Wind,257.0,9.97,239000.0,1.33,180000.0,144.0,318.0
+Fronline Communications_CHP,29.0,15.4,298000.0,10.9,27300.0,9.0,481.0
+Fronline Communications_PV,715.0,7.22,760000.0,2.68,284000.0,466.0,14.0
+Global Headquarters_Wind,2350.0,15.4,514000.0,0.41,1.26e6,709.0,440.0
+Global Headquarters_CHP,1190.0,7.62,277000.0,0.86,321000.0,257.0,1700.0
+Global Headquarters_PV,1420.0,22.5,31000.0,0.03,1.14e6,1150.0,1210.0
+JLG - Weber Lane_Wind,511.0,7.12,263000.0,1.38,190000.0,223.0,3080.0
+JLG - Weber Lane_CHP,2180.0,16.2,-10000.0,-0.01,830000.0,512.0,2350.0
+JLG - Weber Lane_PV,578.0,11.4,208000.0,0.64,324000.0,498.0,3020.0
+Aerotech - Lektro_Wind,105.0,30.5,239000.0,1.23,194000.0,58.0,589.0
+Aerotech - Lektro_CHP,284.0,37.5,193000.0,0.85,227000.0,86.0,514.0
+Aerotech - Lektro_PV,519.0,10.2,370000.0,1.74,213000.0,409.0,266.0
+Pierce - Neenah_Wind,743.0,4.59,584000.0,2.61,224000.0,239.0,1130.0
+Pierce - Neenah_CHP,1050.0,4.51,516000.0,1.9,272000.0,236.0,1150.0
+Pierce - Neenah_PV,852.0,10.3,407000.0,0.72,565000.0,690.0,1020.0
+Pierce - Bradenton_Wind,2000.0,19.0,338000.0,0.21,1.6e6,867.0,2210.0
+Pierce - Bradenton_CHP,380.0,30.3,173000.0,0.55,312000.0,120.0,3400.0
+Pierce - Bradenton_PV,2760.0,13.9,760000.0,0.39,1.96e6,1800.0,1730.0
+JLG - Sunnyside _Wind,851.0,16.8,230000.0,0.45,516000.0,372.0,1500.0
+JLG - Sunnyside _CHP,1070.0,19.1,-2000.0,-0.01,360000.0,273.0,1570.0
+JLG - Sunnyside _PV,926.0,18.0,144000.0,0.21,700000.0,798.0,1420.0
+JLG - McConnellsburg_Wind,8330.0,14.8,1.3e6,0.3,4.39e6,2810.0,13200.0
+JLG - McConnellsburg_CHP,12800.0,17.6,-450000.0,-0.13,3.53e6,2190.0,12500.0
+JLG - McConnellsburg_PV,3550.0,26.4,-710000.0,-0.21,3.46e6,3000.0,17000.0
+Spartanburg - NGDV Faciltiy_Wind,3420.0,37.1,-1.36e6,-0.3,4.48e6,2180.0,3240.0
+Spartanburg - NGDV Faciltiy_CHP,1600.0,8.35,299000.0,0.7,428000.0,313.0,5000.0
+Spartanburg - NGDV Faciltiy_PV,6190.0,27.2,-168000.0,-0.03,5.31e6,4480.0,1040.0
+Oshkosh Data Center_Wind,64.0,11.0,310000.0,7.37,42100.0,19.0,1420.0
+Oshkosh Data Center_CHP,9.0,447.0,294000.0,37.0,7940.0,3.0,1470.0
+Oshkosh Data Center_PV,60.0,18.6,290000.0,4.78,60700.0,48.0,1430.0
+Piere - Industrial Park Plant_Wind,4120.0,13.2,1.02e6,0.4,2.57e6,1310.0,3560.0
+Piere - Industrial Park Plant_CHP,3940.0,5.96,1.36e6,1.11,1.23e6,747.0,4710.0
+Piere - Industrial Park Plant_PV,2870.0,16.2,217000.0,0.08,2.6e6,2310.0,4570.0
+Iowa Contract Fabricators_Wind,2260.0,12.8,1.29e6,1.18,1.09e6,634.0,1110.0
+Iowa Contract Fabricators_CHP,0.0,0.0,-461000.0,-0.64,722000.0,460.0,2870.0
+Iowa Contract Fabricators_PV,844.0,10.3,414000.0,0.81,512000.0,648.0,2150.0
+Kewaunee Fabrications_Wind,0.0,0.0,0.0,0.0,0.0,0.0,0.0
+Kewaunee Fabrications_CHP,2570.0,10.6,449000.0,0.32,1.42e6,858.0,3040.0
+Kewaunee Fabrications_PV,1650.0,15.2,240000.0,0.18,1.32e6,1300.0,3200.0

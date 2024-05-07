@@ -1,0 +1,785 @@
+{
+    "Aerotech - Ground Support Equipment": {
+        "Wind": {
+            "Elec_Produced_MWh": 1452.0,
+            "Simple_Payback": 22.43,
+            "NPV": 37000.0,
+            "NPVI": 0.03,
+            "CapEx": 1.435e6,
+            "Size": 790.0,
+            "CO2_Reduced_Year_One_Tonne": 2030.0
+        },
+        "CHP": {
+            "Elec_Produced_MWh": 0.0,
+            "Simple_Payback": 75.8,
+            "NPV": 299915.1,
+            "NPVI": 2182.79,
+            "CapEx": 137.4,
+            "Size": 0.0,
+            "CO2_Reduced_Year_One_Tonne": 3035.0
+        },
+        "PV": {
+            "Elec_Produced_MWh": 2113.0,
+            "Simple_Payback": 13.39,
+            "NPV": 643000.0,
+            "NPVI": 0.43,
+            "CapEx": 1.499e6,
+            "Size": 1436.0,
+            "CO2_Reduced_Year_One_Tonne": 1629.0
+        }
+    },
+    "IMT (Iowa Mold Tooling)": {
+        "Wind": {
+            "Elec_Produced_MWh": 1945.0,
+            "Simple_Payback": 8.5,
+            "NPV": 1.092e6,
+            "NPVI": 1.42,
+            "CapEx": 767600.0,
+            "Size": 486.0,
+            "CO2_Reduced_Year_One_Tonne": 2701.0
+        },
+        "CHP": {
+            "Elec_Produced_MWh": 2538.0,
+            "Simple_Payback": 15.32,
+            "NPV": 15000.0,
+            "NPVI": 0.01,
+            "CapEx": 1.154e6,
+            "Size": 705.0,
+            "CO2_Reduced_Year_One_Tonne": 2681.0
+        },
+        "PV": {
+            "Elec_Produced_MWh": 1301.0,
+            "Simple_Payback": 13.78,
+            "NPV": 353900.0,
+            "NPVI": 0.37,
+            "CapEx": 953000.0,
+            "Size": 1000.0,
+            "CO2_Reduced_Year_One_Tonne": 3106.0
+        }
+    },
+    "Jefferson City": {
+        "Wind": {
+            "Elec_Produced_MWh": 5486.0,
+            "Simple_Payback": 17.15,
+            "NPV": 266300.0,
+            "NPVI": 0.1,
+            "CapEx": 2.602e6,
+            "Size": 1738.0,
+            "CO2_Reduced_Year_One_Tonne": 5544.0
+        },
+        "CHP": {
+            "Elec_Produced_MWh": 0.0,
+            "Simple_Payback": 0.0,
+            "NPV": 211100.0,
+            "NPVI": 1.77,
+            "CapEx": 119500.0,
+            "Size": 41.0,
+            "CO2_Reduced_Year_One_Tonne": 10216.0
+        },
+        "PV": {
+            "Elec_Produced_MWh": 3707.0,
+            "Simple_Payback": 29.4,
+            "NPV": -990000.0,
+            "NPVI": -0.29,
+            "CapEx": 3.359e6,
+            "Size": 2920.0,
+            "CO2_Reduced_Year_One_Tonne": 7012.0
+        }
+    },
+    "Aerotech - Jetway Systems": {
+        "Wind": {
+            "Elec_Produced_MWh": 1167.0,
+            "Simple_Payback": 41.66,
+            "NPV": -134000.0,
+            "NPVI": -0.12,
+            "CapEx": 1.073e6,
+            "Size": 625.0,
+            "CO2_Reduced_Year_One_Tonne": 4027.0
+        },
+        "CHP": {
+            "Elec_Produced_MWh": 3120.0,
+            "Simple_Payback": 11.96,
+            "NPV": 298790.0,
+            "NPVI": 0.18,
+            "CapEx": 1.644e6,
+            "Size": 991.0,
+            "CO2_Reduced_Year_One_Tonne": 3504.0
+        },
+        "PV": {
+            "Elec_Produced_MWh": 2010.0,
+            "Simple_Payback": 19.89,
+            "NPV": 144000.0,
+            "NPVI": 0.1,
+            "CapEx": 1.481e6,
+            "Size": 1421.0,
+            "CO2_Reduced_Year_One_Tonne": 3641.0
+        }
+    },
+    "McNeilus - Dodge Center": {
+        "Wind": {
+            "Elec_Produced_MWh": 17361.0,
+            "Simple_Payback": 9.66,
+            "NPV": 8.02e6,
+            "NPVI": 1.34,
+            "CapEx": 5.994e6,
+            "Size": 3768.0,
+            "CO2_Reduced_Year_One_Tonne": 2148.0
+        },
+        "CHP": {
+            "Elec_Produced_MWh": 9518.0,
+            "Simple_Payback": 7.97,
+            "NPV": 2.61e6,
+            "NPVI": 0.63,
+            "CapEx": 4.128e6,
+            "Size": 2692.0,
+            "CO2_Reduced_Year_One_Tonne": 9861.0
+        },
+        "PV": {
+            "Elec_Produced_MWh": 5435.0,
+            "Simple_Payback": 14.44,
+            "NPV": 832000.0,
+            "NPVI": 0.16,
+            "CapEx": 5.045e6,
+            "Size": 4265.0,
+            "CO2_Reduced_Year_One_Tonne": 11017.0
+        }
+    },
+    "Menasha Data Center": {
+        "Wind": {
+            "Elec_Produced_MWh": 455.0,
+            "Simple_Payback": 13.53,
+            "NPV": 326900.0,
+            "NPVI": 1.06,
+            "CapEx": 309800.0,
+            "Size": 141.0,
+            "CO2_Reduced_Year_One_Tonne": 1675.0
+        },
+        "CHP": {
+            "Elec_Produced_MWh": 0.0,
+            "Simple_Payback": 0.0,
+            "NPV": 299948.1,
+            "NPVI": 4305.27,
+            "CapEx": 69.67,
+            "Size": 0.0,
+            "CO2_Reduced_Year_One_Tonne": 2062.0
+        },
+        "PV": {
+            "Elec_Produced_MWh": 87.0,
+            "Simple_Payback": 20.13,
+            "NPV": 282000.0,
+            "NPVI": 3.21,
+            "CapEx": 87840.0,
+            "Size": 70.0,
+            "CO2_Reduced_Year_One_Tonne": 1986.0
+        }
+    },
+    "Murfreesboro": {
+        "Wind": {
+            "Elec_Produced_MWh": 294.0,
+            "Simple_Payback": 20.83,
+            "NPV": 65000.0,
+            "NPVI": 0.21,
+            "CapEx": 307500.0,
+            "Size": 182.0,
+            "CO2_Reduced_Year_One_Tonne": 305.0
+        },
+        "CHP": {
+            "Elec_Produced_MWh": 163.0,
+            "Simple_Payback": 12.96,
+            "NPV": 307420.0,
+            "NPVI": 2.83,
+            "CapEx": 108700.0,
+            "Size": 37.0,
+            "CO2_Reduced_Year_One_Tonne": 448.0
+        },
+        "PV": {
+            "Elec_Produced_MWh": 487.0,
+            "Simple_Payback": 8.44,
+            "NPV": 313100.0,
+            "NPVI": 1.84,
+            "CapEx": 170300.0,
+            "Size": 375.0,
+            "CO2_Reduced_Year_One_Tonne": 136.0
+        }
+    },
+    "Defense - West Plant": {
+        "Wind": {
+            "Elec_Produced_MWh": 2308.0,
+            "Simple_Payback": 17.26,
+            "NPV": 463000.0,
+            "NPVI": 0.38,
+            "CapEx": 1.228e6,
+            "Size": 696.0,
+            "CO2_Reduced_Year_One_Tonne": 1376.0
+        },
+        "CHP": {
+            "Elec_Produced_MWh": 1739.0,
+            "Simple_Payback": 13.73,
+            "NPV": 108000.0,
+            "NPVI": 0.1,
+            "CapEx": 1.091e6,
+            "Size": 668.0,
+            "CO2_Reduced_Year_One_Tonne": 2261.0
+        },
+        "PV": {
+            "Elec_Produced_MWh": 493.0,
+            "Simple_Payback": 7.16,
+            "NPV": 263300.0,
+            "NPVI": 1.32,
+            "CapEx": 199900.0,
+            "Size": 399.0,
+            "CO2_Reduced_Year_One_Tonne": 2909.0
+        }
+    },
+    "Defense - Harrison": {
+        "Wind": {
+            "Elec_Produced_MWh": 3181.0,
+            "Simple_Payback": 16.36,
+            "NPV": 491000.0,
+            "NPVI": 0.27,
+            "CapEx": 1.806e6,
+            "Size": 959.0,
+            "CO2_Reduced_Year_One_Tonne": 2060.0
+        },
+        "CHP": {
+            "Elec_Produced_MWh": 2826.0,
+            "Simple_Payback": 9.55,
+            "NPV": 453000.0,
+            "NPVI": 0.44,
+            "CapEx": 1.039e6,
+            "Size": 638.0,
+            "CO2_Reduced_Year_One_Tonne": 3025.0
+        },
+        "PV": {
+            "Elec_Produced_MWh": 2240.0,
+            "Simple_Payback": 21.46,
+            "NPV": -128000.0,
+            "NPVI": -0.06,
+            "CapEx": 1.97e6,
+            "Size": 1812.0,
+            "CO2_Reduced_Year_One_Tonne": 2815.0
+        }
+    },
+    "JLG - Shippensburg": {
+        "Wind": {
+            "Elec_Produced_MWh": 2384.0,
+            "Simple_Payback": 36.21,
+            "NPV": -81000.0,
+            "NPVI": -0.04,
+            "CapEx": 2.008e6,
+            "Size": 1051.0,
+            "CO2_Reduced_Year_One_Tonne": 1042.0
+        },
+        "CHP": {
+            "Elec_Produced_MWh": 0.0,
+            "Simple_Payback": 0.0,
+            "NPV": -26000.0,
+            "NPVI": -0.19,
+            "CapEx": 137800.0,
+            "Size": 178.0,
+            "CO2_Reduced_Year_One_Tonne": 2825.0
+        },
+        "PV": {
+            "Elec_Produced_MWh": 2344.0,
+            "Simple_Payback": 38.45,
+            "NPV": -145000.0,
+            "NPVI": -0.07,
+            "CapEx": 2.106e6,
+            "Size": 1920.0,
+            "CO2_Reduced_Year_One_Tonne": 1031.0
+        }
+    },
+    "Defense - North Plant": {
+        "Wind": {
+            "Elec_Produced_MWh": 960.0,
+            "Simple_Payback": 5.47,
+            "NPV": 538000.0,
+            "NPVI": 1.6,
+            "CapEx": 335600.0,
+            "Size": 289.0,
+            "CO2_Reduced_Year_One_Tonne": 4311.0
+        },
+        "CHP": {
+            "Elec_Produced_MWh": 2352.0,
+            "Simple_Payback": 7.91,
+            "NPV": 428000.0,
+            "NPVI": 0.71,
+            "CapEx": 602400.0,
+            "Size": 400.0,
+            "CO2_Reduced_Year_One_Tonne": 3772.0
+        },
+        "PV": {
+            "Elec_Produced_MWh": 1847.0,
+            "Simple_Payback": 16.21,
+            "NPV": 116000.0,
+            "NPVI": 0.07,
+            "CapEx": 1.572e6,
+            "Size": 1494.0,
+            "CO2_Reduced_Year_One_Tonne": 3520.0
+        }
+    },
+    "Defense - South Plant-ECoat": {
+        "Wind": {
+            "Elec_Produced_MWh": 9284.0,
+            "Simple_Payback": 13.3,
+            "NPV": 1.73e6,
+            "NPVI": 0.48,
+            "CapEx": 3.603e6,
+            "Size": 2337.0,
+            "CO2_Reduced_Year_One_Tonne": 8078.0
+        },
+        "CHP": {
+            "Elec_Produced_MWh": 9026.0,
+            "Simple_Payback": 14.23,
+            "NPV": 95000.0,
+            "NPVI": 0.02,
+            "CapEx": 4.445e6,
+            "Size": 2884.0,
+            "CO2_Reduced_Year_One_Tonne": 10345.0
+        },
+        "PV": {
+            "Elec_Produced_MWh": 3605.0,
+            "Simple_Payback": 23.57,
+            "NPV": -660000.0,
+            "NPVI": -0.2,
+            "CapEx": 3.354e6,
+            "Size": 2916.0,
+            "CO2_Reduced_Year_One_Tonne": 12832.0
+        }
+    },
+    "JLG - Hykes Road": {
+        "Wind": {
+            "Elec_Produced_MWh": 1464.0,
+            "Simple_Payback": 10.44,
+            "NPV": 500000.0,
+            "NPVI": 0.78,
+            "CapEx": 642400.0,
+            "Size": 429.0,
+            "CO2_Reduced_Year_One_Tonne": 2094.0
+        },
+        "CHP": {
+            "Elec_Produced_MWh": 0.0,
+            "Simple_Payback": 0.0,
+            "NPV": -390000.0,
+            "NPVI": -0.62,
+            "CapEx": 627300.0,
+            "Size": 412.0,
+            "CO2_Reduced_Year_One_Tonne": 3278.0
+        },
+        "PV": {
+            "Elec_Produced_MWh": 853.0,
+            "Simple_Payback": 15.02,
+            "NPV": 175000.0,
+            "NPVI": 0.33,
+            "CapEx": 527000.0,
+            "Size": 660.0,
+            "CO2_Reduced_Year_One_Tonne": 2560.0
+        }
+    },
+    "Pierce -Assembly": {
+        "Wind": {
+            "Elec_Produced_MWh": 4119.0,
+            "Simple_Payback": 6.63,
+            "NPV": 1.88e6,
+            "NPVI": 1.24,
+            "CapEx": 1.521e6,
+            "Size": 1090.0,
+            "CO2_Reduced_Year_One_Tonne": 10758.0
+        },
+        "CHP": {
+            "Elec_Produced_MWh": 8502.0,
+            "Simple_Payback": 7.59,
+            "NPV": 2.24e6,
+            "NPVI": 0.69,
+            "CapEx": 3.228e6,
+            "Size": 1976.0,
+            "CO2_Reduced_Year_One_Tonne": 8996.0
+        },
+        "PV": {
+            "Elec_Produced_MWh": 3571.0,
+            "Simple_Payback": 16.99,
+            "NPV": 28000.0,
+            "NPVI": 0.01,
+            "CapEx": 3.302e6,
+            "Size": 2875.0,
+            "CO2_Reduced_Year_One_Tonne": 11153.0
+        }
+    },
+    "Fronline Communications": {
+        "Wind": {
+            "Elec_Produced_MWh": 257.0,
+            "Simple_Payback": 9.97,
+            "NPV": 239400.0,
+            "NPVI": 1.33,
+            "CapEx": 179900.0,
+            "Size": 144.0,
+            "CO2_Reduced_Year_One_Tonne": 318.0
+        },
+        "CHP": {
+            "Elec_Produced_MWh": 29.0,
+            "Simple_Payback": 15.43,
+            "NPV": 298460.0,
+            "NPVI": 10.94,
+            "CapEx": 27280.0,
+            "Size": 9.0,
+            "CO2_Reduced_Year_One_Tonne": 481.0
+        },
+        "PV": {
+            "Elec_Produced_MWh": 715.0,
+            "Simple_Payback": 7.22,
+            "NPV": 760000.0,
+            "NPVI": 2.68,
+            "CapEx": 284100.0,
+            "Size": 466.0,
+            "CO2_Reduced_Year_One_Tonne": 14.0
+        }
+    },
+    "Global Headquarters": {
+        "Wind": {
+            "Elec_Produced_MWh": 2351.0,
+            "Simple_Payback": 15.36,
+            "NPV": 514000.0,
+            "NPVI": 0.41,
+            "CapEx": 1.256e6,
+            "Size": 709.0,
+            "CO2_Reduced_Year_One_Tonne": 440.0
+        },
+        "CHP": {
+            "Elec_Produced_MWh": 1194.0,
+            "Simple_Payback": 7.62,
+            "NPV": 276800.0,
+            "NPVI": 0.86,
+            "CapEx": 320800.0,
+            "Size": 257.0,
+            "CO2_Reduced_Year_One_Tonne": 1699.0
+        },
+        "PV": {
+            "Elec_Produced_MWh": 1417.0,
+            "Simple_Payback": 22.5,
+            "NPV": 31000.0,
+            "NPVI": 0.03,
+            "CapEx": 1.136e6,
+            "Size": 1146.0,
+            "CO2_Reduced_Year_One_Tonne": 1206.0
+        }
+    },
+    "JLG - Weber Lane": {
+        "Wind": {
+            "Elec_Produced_MWh": 511.0,
+            "Simple_Payback": 7.12,
+            "NPV": 263000.0,
+            "NPVI": 1.38,
+            "CapEx": 190000.0,
+            "Size": 223.0,
+            "CO2_Reduced_Year_One_Tonne": 3085.0
+        },
+        "CHP": {
+            "Elec_Produced_MWh": 2178.0,
+            "Simple_Payback": 16.16,
+            "NPV": -10000.0,
+            "NPVI": -0.01,
+            "CapEx": 829900.0,
+            "Size": 512.0,
+            "CO2_Reduced_Year_One_Tonne": 2354.0
+        },
+        "PV": {
+            "Elec_Produced_MWh": 578.0,
+            "Simple_Payback": 11.41,
+            "NPV": 207900.0,
+            "NPVI": 0.64,
+            "CapEx": 324000.0,
+            "Size": 498.0,
+            "CO2_Reduced_Year_One_Tonne": 3024.0
+        }
+    },
+    "Aerotech - Lektro": {
+        "Wind": {
+            "Elec_Produced_MWh": 105.0,
+            "Simple_Payback": 30.52,
+            "NPV": 239400.0,
+            "NPVI": 1.23,
+            "CapEx": 194100.0,
+            "Size": 58.0,
+            "CO2_Reduced_Year_One_Tonne": 589.0
+        },
+        "CHP": {
+            "Elec_Produced_MWh": 284.0,
+            "Simple_Payback": 37.5,
+            "NPV": 193000.0,
+            "NPVI": 0.85,
+            "CapEx": 226600.0,
+            "Size": 86.0,
+            "CO2_Reduced_Year_One_Tonne": 514.0
+        },
+        "PV": {
+            "Elec_Produced_MWh": 519.0,
+            "Simple_Payback": 10.21,
+            "NPV": 369700.0,
+            "NPVI": 1.74,
+            "CapEx": 213000.0,
+            "Size": 409.0,
+            "CO2_Reduced_Year_One_Tonne": 266.0
+        }
+    },
+    "Pierce - Neenah": {
+        "Wind": {
+            "Elec_Produced_MWh": 743.0,
+            "Simple_Payback": 4.59,
+            "NPV": 584000.0,
+            "NPVI": 2.61,
+            "CapEx": 224100.0,
+            "Size": 239.0,
+            "CO2_Reduced_Year_One_Tonne": 1133.0
+        },
+        "CHP": {
+            "Elec_Produced_MWh": 1046.0,
+            "Simple_Payback": 4.51,
+            "NPV": 516000.0,
+            "NPVI": 1.9,
+            "CapEx": 272000.0,
+            "Size": 236.0,
+            "CO2_Reduced_Year_One_Tonne": 1147.0
+        },
+        "PV": {
+            "Elec_Produced_MWh": 852.0,
+            "Simple_Payback": 10.29,
+            "NPV": 407000.0,
+            "NPVI": 0.72,
+            "CapEx": 564600.0,
+            "Size": 690.0,
+            "CO2_Reduced_Year_One_Tonne": 1024.0
+        }
+    },
+    "Pierce - Bradenton": {
+        "Wind": {
+            "Elec_Produced_MWh": 1995.0,
+            "Simple_Payback": 19.01,
+            "NPV": 337500.0,
+            "NPVI": 0.21,
+            "CapEx": 1.603e6,
+            "Size": 867.0,
+            "CO2_Reduced_Year_One_Tonne": 2212.0
+        },
+        "CHP": {
+            "Elec_Produced_MWh": 380.0,
+            "Simple_Payback": 30.29,
+            "NPV": 173000.0,
+            "NPVI": 0.55,
+            "CapEx": 311800.0,
+            "Size": 120.0,
+            "CO2_Reduced_Year_One_Tonne": 3402.0
+        },
+        "PV": {
+            "Elec_Produced_MWh": 2761.0,
+            "Simple_Payback": 13.87,
+            "NPV": 760000.0,
+            "NPVI": 0.39,
+            "CapEx": 1.958e6,
+            "Size": 1802.0,
+            "CO2_Reduced_Year_One_Tonne": 1727.0
+        }
+    },
+    "JLG - Sunnyside ": {
+        "Wind": {
+            "Elec_Produced_MWh": 851.0,
+            "Simple_Payback": 16.82,
+            "NPV": 230300.0,
+            "NPVI": 0.45,
+            "CapEx": 515900.0,
+            "Size": 372.0,
+            "CO2_Reduced_Year_One_Tonne": 1499.0
+        },
+        "CHP": {
+            "Elec_Produced_MWh": 1071.0,
+            "Simple_Payback": 19.07,
+            "NPV": -2000.0,
+            "NPVI": -0.01,
+            "CapEx": 360200.0,
+            "Size": 273.0,
+            "CO2_Reduced_Year_One_Tonne": 1571.0
+        },
+        "PV": {
+            "Elec_Produced_MWh": 926.0,
+            "Simple_Payback": 18.0,
+            "NPV": 144000.0,
+            "NPVI": 0.21,
+            "CapEx": 699900.0,
+            "Size": 798.0,
+            "CO2_Reduced_Year_One_Tonne": 1425.0
+        }
+    },
+    "JLG - McConnellsburg": {
+        "Wind": {
+            "Elec_Produced_MWh": 8332.0,
+            "Simple_Payback": 14.77,
+            "NPV": 1.3e6,
+            "NPVI": 0.3,
+            "CapEx": 4.388e6,
+            "Size": 2807.0,
+            "CO2_Reduced_Year_One_Tonne": 13163.0
+        },
+        "CHP": {
+            "Elec_Produced_MWh": 12795.0,
+            "Simple_Payback": 17.6,
+            "NPV": -450000.0,
+            "NPVI": -0.13,
+            "CapEx": 3.533e6,
+            "Size": 2193.0,
+            "CO2_Reduced_Year_One_Tonne": 12462.0
+        },
+        "PV": {
+            "Elec_Produced_MWh": 3553.0,
+            "Simple_Payback": 26.41,
+            "NPV": -710000.0,
+            "NPVI": -0.21,
+            "CapEx": 3.459e6,
+            "Size": 3000.0,
+            "CO2_Reduced_Year_One_Tonne": 16971.0
+        }
+    },
+    "Spartanburg - NGDV Faciltiy": {
+        "Wind": {
+            "Elec_Produced_MWh": 3418.0,
+            "Simple_Payback": 37.13,
+            "NPV": -1.36e6,
+            "NPVI": -0.3,
+            "CapEx": 4.479e6,
+            "Size": 2176.0,
+            "CO2_Reduced_Year_One_Tonne": 3236.0
+        },
+        "CHP": {
+            "Elec_Produced_MWh": 1604.0,
+            "Simple_Payback": 8.35,
+            "NPV": 299496.0,
+            "NPVI": 0.7,
+            "CapEx": 428500.0,
+            "Size": 313.0,
+            "CO2_Reduced_Year_One_Tonne": 4995.0
+        },
+        "PV": {
+            "Elec_Produced_MWh": 6189.0,
+            "Simple_Payback": 27.15,
+            "NPV": -168000.0,
+            "NPVI": -0.03,
+            "CapEx": 5.314e6,
+            "Size": 4480.0,
+            "CO2_Reduced_Year_One_Tonne": 1044.0
+        }
+    },
+    "Oshkosh Data Center": {
+        "Wind": {
+            "Elec_Produced_MWh": 64.0,
+            "Simple_Payback": 11.01,
+            "NPV": 309800.0,
+            "NPVI": 7.37,
+            "CapEx": 42060.0,
+            "Size": 19.0,
+            "CO2_Reduced_Year_One_Tonne": 1424.0
+        },
+        "CHP": {
+            "Elec_Produced_MWh": 9.0,
+            "Simple_Payback": 447.05,
+            "NPV": 294130.0,
+            "NPVI": 37.03,
+            "CapEx": 7942.0,
+            "Size": 3.0,
+            "CO2_Reduced_Year_One_Tonne": 1473.0
+        },
+        "PV": {
+            "Elec_Produced_MWh": 60.0,
+            "Simple_Payback": 18.58,
+            "NPV": 290310.0,
+            "NPVI": 4.78,
+            "CapEx": 60730.0,
+            "Size": 48.0,
+            "CO2_Reduced_Year_One_Tonne": 1426.0
+        }
+    },
+    "Piere - Industrial Park Plant": {
+        "Wind": {
+            "Elec_Produced_MWh": 4119.0,
+            "Simple_Payback": 13.23,
+            "NPV": 1.018e6,
+            "NPVI": 0.4,
+            "CapEx": 2.573e6,
+            "Size": 1308.0,
+            "CO2_Reduced_Year_One_Tonne": 3563.0
+        },
+        "CHP": {
+            "Elec_Produced_MWh": 3935.0,
+            "Simple_Payback": 5.96,
+            "NPV": 1.36e6,
+            "NPVI": 1.11,
+            "CapEx": 1.226e6,
+            "Size": 747.0,
+            "CO2_Reduced_Year_One_Tonne": 4711.0
+        },
+        "PV": {
+            "Elec_Produced_MWh": 2873.0,
+            "Simple_Payback": 16.16,
+            "NPV": 216600.0,
+            "NPVI": 0.08,
+            "CapEx": 2.597e6,
+            "Size": 2312.0,
+            "CO2_Reduced_Year_One_Tonne": 4567.0
+        }
+    },
+    "Iowa Contract Fabricators": {
+        "Wind": {
+            "Elec_Produced_MWh": 2263.0,
+            "Simple_Payback": 12.85,
+            "NPV": 1.288e6,
+            "NPVI": 1.18,
+            "CapEx": 1.092e6,
+            "Size": 634.0,
+            "CO2_Reduced_Year_One_Tonne": 1107.0
+        },
+        "CHP": {
+            "Elec_Produced_MWh": 0.0,
+            "Simple_Payback": 0.0,
+            "NPV": -461000.0,
+            "NPVI": -0.64,
+            "CapEx": 722100.0,
+            "Size": 460.0,
+            "CO2_Reduced_Year_One_Tonne": 2871.0
+        },
+        "PV": {
+            "Elec_Produced_MWh": 844.0,
+            "Simple_Payback": 10.26,
+            "NPV": 414000.0,
+            "NPVI": 0.81,
+            "CapEx": 511900.0,
+            "Size": 648.0,
+            "CO2_Reduced_Year_One_Tonne": 2151.0
+        }
+    },
+    "Kewaunee Fabrications": {
+        "Wind": {
+            "Elec_Produced_MWh": 0.0,
+            "Simple_Payback": 0.0,
+            "NPV": 0.0,
+            "NPVI": 0.0,
+            "CapEx": 0.0,
+            "Size": 0.0,
+            "CO2_Reduced_Year_One_Tonne": 0.0
+        },
+        "CHP": {
+            "Elec_Produced_MWh": 2574.0,
+            "Simple_Payback": 10.58,
+            "NPV": 449000.0,
+            "NPVI": 0.32,
+            "CapEx": 1.417e6,
+            "Size": 858.0,
+            "CO2_Reduced_Year_One_Tonne": 3040.0
+        },
+        "PV": {
+            "Elec_Produced_MWh": 1653.0,
+            "Simple_Payback": 15.19,
+            "NPV": 240400.0,
+            "NPVI": 0.18,
+            "CapEx": 1.324e6,
+            "Size": 1296.0,
+            "CO2_Reduced_Year_One_Tonne": 3198.0
+        }
+    }
+}

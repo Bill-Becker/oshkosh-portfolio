@@ -3,6 +3,9 @@ using DataFrames
 using JSON
 using XLSX
 
+# This file creates the lat_long.json file (once) to avoid needing PyCall and geopy
+#  which are finicky
+
 # Import Excel file into DataFrame
 df = DataFrame(XLSX.readtable("data.xlsx", "OshKosh Data"))
 
