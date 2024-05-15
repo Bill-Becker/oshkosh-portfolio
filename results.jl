@@ -56,9 +56,13 @@ for (i, site) in enumerate(df[!, "Oshkosh Facility Name"])
             om_cost = analysis["outputs"]["Financial"]["year_one_om_costs_before_tax"]
             year_one_savings = elec_savings + fuel_savings - om_cost
             spp_s = round(max(0.0, capex_s / year_one_savings), digits=2)
-            elec_produced_mwh_s = round(analysis["outputs"]["Site"]["annual_renewable_electricity_kwh"] / 1E3, digits=0)
+            if isnan(spp_s) || isnothing(spp_s) || isinf(spp_s)
+                spp_s = 0.0
+            end
+            energy_produced_mwh_s = round(analysis["outputs"]["Site"]["annual_renewable_electricity_kwh"] / 1E3, digits=0)
             if tech == "CHP"
-                elec_produced_mwh_s += round(analysis["outputs"]["CHP"]["annual_electric_production_kwh"] / 1E3, digits=0)
+                energy_produced_mwh_s += round(analysis["outputs"]["CHP"]["annual_electric_production_kwh"] / 1E3, digits=0)
+                energy_produced_mwh_s += round(analysis["outputs"]["CHP"]["annual_thermal_production_mmbtu"] * 1E3 / 3412.0, digits=0)
             end
             annual_co2_reduced_tonne_s = round(analysis["outputs"]["Site"]["annual_emissions_tonnes_CO2"], digits=0)
             # if haskey(analysis["outputs"]["Financial"], "breakeven_cost_of_emissions_reduction_per_tonne_CO2")
@@ -71,11 +75,18 @@ for (i, site) in enumerate(df[!, "Oshkosh Facility Name"])
             results_summary_dict[site][tech]["CapEx"] = capex_s
             results_summary_dict[site][tech]["NPVI"] = npvi_s
             results_summary_dict[site][tech]["Simple_Payback"] = spp_s
-            results_summary_dict[site][tech]["Elec_Produced_MWh"] = elec_produced_mwh_s
+            results_summary_dict[site][tech]["Energy_Produced_MWh"] = energy_produced_mwh_s
             results_summary_dict[site][tech]["CO2_Reduced_Year_One_Tonne"] = annual_co2_reduced_tonne_s  # Year one because we just use the first year emissions
             # results_summary_dict[site][tech]["CO2_Breakeven_Cost_Per_Tonne"] = co2_breakeven_cost_per_tonne
         catch
-            @warn("Skipping $site for $tech because did not properly run")
+            @warn("Assigning zeros for $site for $tech because did not properly run")
+            results_summary_dict[site][tech]["Size"] = 0.0
+            results_summary_dict[site][tech]["NPV"] = 0.0
+            results_summary_dict[site][tech]["CapEx"] = 0.0
+            results_summary_dict[site][tech]["NPVI"] = 0.0
+            results_summary_dict[site][tech]["Simple_Payback"] = 0.0
+            results_summary_dict[site][tech]["Energy_Produced_MWh"] = 0.0
+            results_summary_dict[site][tech]["CO2_Reduced_Year_One_Tonne"] = 0.0            
         end
     end
 end
