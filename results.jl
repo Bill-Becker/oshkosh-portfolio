@@ -31,12 +31,14 @@ for (i, site) in enumerate(df[!, "Oshkosh Facility Name"])
             else
                 size_s = analysis["outputs"][tech]["size_kw"]
             end
-            npv_s = round(analysis["outputs"]["Financial"]["npv"], sigdigits=3) + iac_grant
             capex_before_incent = analysis["outputs"]["Financial"]["initial_capital_costs"]
-            if capex_before_incent > 2*iac_grant
+            # IAC grant only available if 50% cost share on investment
+            if (0.5 * capex_before_incent) > iac_grant
                 capex_s = round(capex_before_incent * (1 - itc_fraction) - iac_grant, sigdigits=4)
+                npv_s = round(analysis["outputs"]["Financial"]["npv"], sigdigits=3) + iac_grant
             else
                 capex_s = round(capex_before_incent * (1 - itc_fraction), sigdigits=4)
+                npv_s = round(analysis["outputs"]["Financial"]["npv"], sigdigits=3)
             end
             if capex_s > 0.0
                 npvi_s = round(npv_s / capex_s, digits=2)
