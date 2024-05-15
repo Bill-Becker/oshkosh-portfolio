@@ -12,7 +12,6 @@ using DotEnv
 DotEnv.load!()
 
 # Check Hybrid GHP with Automatic, different?
-# Report year 1 emissions using Cambium SRMER 1-Year (2024) data
 
 function set_tech_size!(tech, size, input_data)
     if !(tech == "GHP")

@@ -27,7 +27,6 @@ for (i, name) in enumerate(df[!, "Oshkosh Facility Name"])
         city = "Bedford, PA"
     end
     try
-        # TODO get lat/long separately and store in a dict to avoid geolocator calls
         location = geolocator.geocode(city)
         dict[city]["latitude"] = location.latitude
         dict[city]["longitude"] = location.longitude
